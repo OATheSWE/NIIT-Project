@@ -9,22 +9,20 @@
 <form action="Reg.php" method="post" enctype="multipart/form-data">
         <h1>Registeration<h1>
         <p>Fill up the correct values<p>
-         <label for="firstname"><b>First Name</b></label>
-        <input type="text" name="firstname" id="" required><br/>
 
-        <label for="firstname"><b>Last Name</b></label>
+        <label for="Name"><b>Name</b></label>
         <input type="text" name="lastname" id="" required><br/>
 
-        <label for="firstname"><b>Username</b></label>
+        <label for="Username"><b>Username</b></label>
         <input type="text" name="username" id="" required><br/>
 
-        <label for="firstname"><b>Jamb number</b></label>
+        <label for="jamb-number"><b>Jamb number</b></label>
         <input type="number" name="Jamb number" id="" required><br/>
 
-        <label for="firstname"><b>Faculty</b></label>
+        <label for="Faculty"><b>Faculty</b></label>
         <input type="text" name="faculty" id="" required><br/>
 
-        <label for="firstname"><b>Password</b></label>
+        <label for="password"><b>Password</b></label>
         <input type="text" name="password" id="" required><br/>
        
      <button type="submit" name="submit">SUBMIT</button>
@@ -33,16 +31,12 @@
 </html>
 
 <?php
-// if(isset($_POST['submit'])){
-//     header("Location: Login.php");
-//     exit;
-// }
 
 
 if(isset($_POST['submit'])){
     $user = $_POST['username'];
-    $password = $_POST['pwd'];
-    if($user == $username && $password == $pwd){
+    $pwd = $_POST['password'];
+    if($user == $username && $pwd == $password){
         $_SESSION['username'] = $user;
         header("Location: login.php");
         exit;
